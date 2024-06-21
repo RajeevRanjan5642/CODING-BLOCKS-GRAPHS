@@ -39,7 +39,7 @@ public:
 
 int main()
 {
-    class Graph<int>gr;
+    Graph<int>gr;
     gr.addEdge(0,1);
     gr.addEdge(0,3);
     gr.addEdge(1,2);
