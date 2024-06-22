@@ -34,7 +34,7 @@ public:
             dist[node] = INT_MAX;
         }
         dist[src] = 0;
-        parent[src]=src;
+        parent[src] = src;
         while (!q.empty())
         {
             T node = q.front();
@@ -45,7 +45,7 @@ public:
                 {
                     q.push(nbr);
                     dist[nbr] = dist[node] + 1;
-                    parent[nbr]=node;
+                    parent[nbr] = node;
                 }
             }
         }
@@ -56,12 +56,13 @@ public:
             int d = dist[node];
         }
 
-        T temp=dest;
-        while(temp!=src){
-            cout<<temp<<"<--";
-            temp=parent[temp];
+        T temp = dest;
+        while (temp != src)
+        {
+            cout << temp << "<--";
+            temp = parent[temp];
         }
-        cout<<src<<endl;
+        cout << src << endl;
         return dist[dest];
     }
 };
